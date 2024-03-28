@@ -1,0 +1,456 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="PrivateMasterPage.master.cs" Inherits="MasterPages_PrivateMasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Student</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../ASPX_Images/angel.png" />
+
+    <link href="../ASPX_Styles/AdminStyles/css/bootstrap.css" rel="stylesheet" />
+    <link href="../ASPX_Styles/AdminStyles/css/font-awesome.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="../ASPX_Styles/js/jquery-2.1.1.js"></script>
+     <style type="text/css">
+        .btn-primary {
+            background-color: #ffffff;
+            color: black;
+        }
+
+        .Logout {
+            font-size: 1.2em;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            color: #909094;
+        }
+
+            .Logout:hover {
+                color: white;
+                text-decoration: none;
+            }
+
+        body {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 16px;
+            line-height: 1.42857143;
+            color: #1a1819;
+            background-color: #f5f5f5;
+        }
+
+        element.style {
+            background-color: #32d7d7;
+            padding: 2px;
+        }
+
+        .navbar-inverse .navbar-brand {
+            color: #ffffff !important;
+        }
+
+            .navbar-inverse .navbar-brand:hover,
+            .navbar-inverse .navbar-brand:focus {
+                color: #fff !important;
+                background-color: transparent;
+            }
+
+        .navbar-inverse .navbar-text {
+            color: #fffefe !important;
+        }
+
+        .navbar-inverse .navbar-nav > li > a {
+            color: #b0c311 !important;
+        }
+
+        @media (max-width:1680px) {
+            .ImgResp {
+                width: 25%;
+            }
+
+            .aligntext {
+                text-align: right !important;
+            }
+
+            .aligntext1 {
+                text-align: left !important;
+            }
+
+            .TextBox {
+                width: 20%;
+            }
+
+            .imgLogo {
+                width: 40%;
+            }
+
+            .RadioButtonWidth {
+                width: 417px;
+            }
+        }
+
+        @media (max-width:1440px) {
+            .ImgResp {
+                width: 25%;
+            }
+
+            .aligntext {
+                text-align: right !important;
+            }
+
+            .aligntext1 {
+                text-align: left !important;
+            }
+
+            .TextBox {
+                width: 20%;
+            }
+
+            .imgLogo {
+                width: 40%;
+            }
+
+            .RadioButtonWidth {
+                width: 417px;
+            }
+        }
+
+        @media (max-width: 1366px) {
+            .ImgResp {
+                width: 25%;
+            }
+
+            .aligntext {
+                text-align: right !important;
+            }
+
+            .aligntext1 {
+                text-align: left !important;
+            }
+
+            .TextBox {
+                width: 42% !important;
+            }
+
+            .imgLogo {
+                width: 40%;
+            }
+
+            .RadioButtonWidth {
+                width: 417px;
+            }
+        }
+
+        @media (max-width: 1280px) {
+            .ImgResp {
+                width: 50%;
+            }
+
+            .aligntext {
+                text-align: right !important;
+            }
+
+            .aligntext1 {
+                text-align: left !important;
+            }
+
+            .TextBox {
+                width: 70%;
+            }
+
+            .imgLogo {
+                width: 40%;
+            }
+
+            .RadioButtonWidth {
+                width: 417px;
+            }
+        }
+
+        @media (max-width: 1080px) {
+            .ImgResp {
+                width: 50%;
+            }
+
+            .aligntext {
+                text-align: right !important;
+            }
+
+            .aligntext1 {
+                text-align: left !important;
+            }
+
+            .TextBox {
+                width: 70%;
+            }
+
+            .imgLogo {
+                width: 40%;
+            }
+
+            .RadioButtonWidth {
+                width: 417px;
+            }
+        }
+
+        @media (max-width: 1050px) {
+            .ImgResp {
+                width: 25%;
+            }
+
+            .aligntext {
+                text-align: right !important;
+            }
+
+            .aligntext1 {
+                text-align: left !important;
+            }
+
+            .TextBox {
+                width: 70%;
+            }
+
+            .imgLogo {
+                width: 40%;
+            }
+
+            .RadioButtonWidth {
+                width: 417px;
+            }
+        }
+
+        @media (max-width: 1024px) {
+            .ImgResp {
+                width: 25%;
+            }
+
+            .aligntext {
+                text-align: right !important;
+            }
+
+            .aligntext1 {
+                text-align: left !important;
+            }
+
+            .TextBox {
+                width: 70%;
+            }
+
+            .imgLogo {
+                width: 40%;
+            }
+
+            .RadioButtonWidth {
+                width: 417px;
+            }
+        }
+
+        @media (max-width: 991px) {
+            .ImgResp {
+                width: 25%;
+            }
+
+            .aligntext {
+                text-align: left !important;
+            }
+
+            .aligntext1 {
+                text-align: left !important;
+            }
+
+            .TextBox {
+                width: 70% !important;
+            }
+
+            .imgLogo {
+                width: 40%;
+            }
+
+            .RadioButtonWidth {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 900px) {
+            .ImgResp {
+                width: 25%;
+            }
+
+            .aligntext {
+                text-align: left !important;
+            }
+
+            .aligntext1 {
+                text-align: left !important;
+            }
+
+            .TextBox {
+                width: 32%;
+            }
+
+            .imgLogo {
+                width: 40%;
+            }
+        }
+
+        @media (max-width: 800px) {
+            .ImgResp {
+                width: 40%;
+            }
+
+            .aligntext {
+                text-align: left !important;
+            }
+
+            .aligntext1 {
+                text-align: left !important;
+            }
+
+            .TextBox {
+                width: 70%;
+            }
+
+            .imgLogo {
+                width: 70%;
+            }
+        }
+
+        @media (max-width: 360px) {
+            .ImgResp {
+                width: 50%;
+            }
+
+            .aligntext {
+                text-align: left !important;
+            }
+
+            .aligntext1 {
+                text-align: left !important;
+            }
+
+            .TextBox {
+                width: 100%;
+            }
+
+            .imgLogo {
+                width: 100%;
+            }
+        }
+
+        table.Admingridtable1 {
+            /*font-family:  'Montserrat' , 'Trebuchet MS' , sans-serif;*/
+            font-family: Calibri;
+            font-size: 13px;
+            font-weight: bold;
+            color: #333333;
+            border-width: 1px;
+            border-style: solid;
+            border-color: #0e60aa;
+            border-collapse: collapse;
+        }
+
+            table.Admingridtable1 th {
+                text-align: center;
+                border-width: 1px;
+                padding: 8px;
+                border-style: solid;
+                border-color: white;
+                font-size: 15px;
+                background-color: #835715; /*rgb(26, 34, 38);  #f15b4e;*/
+                color: White;
+            }
+
+            table.Admingridtable1 td {
+                text-align: center;
+                border-width: 1px;
+                padding: 8px;
+                border-style: solid;
+                border-color: #0e60aa; /* #666666;*/
+                /*background-color: #ffffff;*/
+            }
+
+                table.Admingridtable1 td span {
+                    font-family: Calibri;
+                    font-size: 13px;
+                }
+
+        .ajax__calendar_container {
+            z-index: 1000;
+        }
+    </style>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+  
+</head>
+<body>
+    <form id="form1" runat="server">
+         <asp:ScriptManager ID="ScriptManager1" runat="server">
+        </asp:ScriptManager>
+         
+    <div class="row">
+        <div class="col-md-12" style="background-color:wheat; padding:1px">
+            <div class="row">
+              
+                <div class="col-md-3"></div>
+                <div class="col-md-2">
+                <img src="../ASPX_Images/mortarboard.png" style="width:50%" />
+                    </div>
+            <div class="col-md-2 ">
+                <h2 style="font-size:60pt;text-align:center;">STUDENT</h2>
+               </div>
+            </div>
+            </div>
+        </div>
+         <nav class="navbar-inverse" style="background-color: #110e40;">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#"></a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav">
+                        <li><a href="Homepage.aspx">HOME</a></li>
+                      
+                        <li><a href="../WebPages/MemberDetails.aspx">ADD MEMBER</a></li>
+                     
+                        <li><a href="CountPg.aspx">VIEW</a> </li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="IndexPg.aspx"><span class="glyphicon glyphicon-log-out"></span>LOGOUT</a></li>
+                      
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+
+        <asp:ContentPlaceHolder id="Header" runat="server">
+        
+        </asp:ContentPlaceHolder>
+         <asp:ContentPlaceHolder id="Body" runat="server">
+             <asp:Label ID="Label1" runat="server" Text="Name"></asp:Label>
+             <asp:Label ID="Label2" runat="server" Text=":"></asp:Label>
+             <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+<asp:Label ID="Label3" runat="server" Text="age"></asp:Label>
+    <asp:Label ID="Label4" runat="server" Text=":"></asp:Label>
+    <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+ 
+              </asp:ContentPlaceHolder>
+         <asp:ContentPlaceHolder id="Footer" runat="server">
+               </asp:ContentPlaceHolder>
+             <div class="row">
+               
+                 <div class="col-md-12" style="background-color:wheat; text-align:center; padding:1px ">
+                     <p style="font-size:20pt;">Thank you for visiting</p>
+                 </div>
+             </div>
+      
+
+    
+    </form>
+</body>
+</html>
